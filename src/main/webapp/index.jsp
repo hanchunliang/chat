@@ -80,13 +80,14 @@
                     if(len>0){
                         index_1 = index_1+len;
                     }
+                    var div = '';
                     for(var i=0;i<len;i++){
                         var msg = msges[i]["content"];
                         var time = msges[i]["time"];
                         var author = msges[i]["author"];
-                        var div = '<div>'+author+'于'+getTimeStr(time)+'说：'+msg+'</div>';
-                        $(".chatuser").append(div);
+                        div = div + '<div>'+author+'于'+getTimeStr(time)+'说：'+msg+'</div>';
                     }
+                    $(".chatuser").append(div);
                 }
             });
         }
@@ -112,6 +113,8 @@
             var name = $(_this).html();
             if(me!=name){
                 $("#who").html(name);
+                $(".chatuser").html("");
+                index_1 = 0;
             }
         }
         function getTimeStr(_time){

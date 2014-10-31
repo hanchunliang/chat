@@ -38,6 +38,7 @@
         }
         function showDetail(_id){
             dialogId = _id;
+            index = 0;
             $(".chatuser").html("");
         }
         function read_1(){
@@ -45,7 +46,7 @@
                 url: "/monitor",
                 dataType: "json",
                 type: "get",
-                data: "type=1&did="+dialogId+"&index=0",
+                data: "type=1&did="+dialogId+"&index="+index,
                 async: false ,
                 success: function (msges){
                     if(!msges) return;
@@ -60,7 +61,6 @@
                         var author = msges[i]["author"];
                         div = div + '<div>'+author+'于'+getTimeStr(time)+'说：'+msg+'</div>';
                     }
-                    $(".chatuser").html("");
                     $(".chatuser").append(div);
                 }
             });
