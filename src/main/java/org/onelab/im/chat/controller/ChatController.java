@@ -51,7 +51,7 @@ public class ChatController extends HttpServlet {
         String msg = req.getParameter("text");
         String to = req.getParameter("name");
         String from = (String) req.getSession().getAttribute("name");
-        if (from==null || to==null){
+        if (from==null || from.equals("") || to==null || to.equals("")){
             return;
         }
         String dialogId = getDialogId(from,to);
