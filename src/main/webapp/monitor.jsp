@@ -106,6 +106,7 @@
         .top{
             width: 1000px;
             height: 300px;
+            overflow: auto;
             background-color:#dddddd;
         }
         .trhead{
