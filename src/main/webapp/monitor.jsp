@@ -103,6 +103,11 @@
         }
     </script>
     <style type="text/css">
+        .tool{
+            width: 1000px;
+            overflow: auto;
+            background-color:#dddddd;
+        }
         .top{
             width: 1000px;
             height: 300px;
@@ -140,7 +145,7 @@
 <div>
     <h1>聊天监控页面</h1>
 </div>
-<div>查询条件：时间<input class="time" id="start" type="text">-<input class="time" type="text" id="end"> 发起人<input type="text" id="from"> 接收人<input type="text" id="to"> <input type="button" value="查询" onclick="search();"></div>
+<div class="tool">查询条件：时间<input class="time" id="start" type="text">-<input class="time" type="text" id="end"> 发起人<input type="text" id="from"> 接收人<input type="text" id="to"> <input type="button" value="查询" onclick="search();"></div>
 <div class="top">
 <table id="table" width="100%"></table>
 </div>
