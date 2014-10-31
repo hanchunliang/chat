@@ -132,7 +132,7 @@
         }
         .center_left{
             float: left;
-            background-color: #aadddd;
+            background-color: #CC9933;
             width: 200px;
             height: 500px;
         }
@@ -143,7 +143,7 @@
             height: 500px;
         }
         .user{
-            background-color:#09aafa;
+            background-color:#dddddd;
             border: 1px solid #CC9933;
         }
         .chatroom{
