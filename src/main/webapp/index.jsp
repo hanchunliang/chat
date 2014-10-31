@@ -144,14 +144,18 @@
             border: 1px solid #CC9933;
         }
         .chatroom{
+            color: #ffffff;
             overflow: auto;
             width: 800px;
             height: 260px;
+            background-color:#000000;
         }
         .chatuser{
+            color: #ffffff;
             overflow: auto;
             width: 800px;
             height: 160px;
+            background-color:#000000;
         }
         .paneltitle{
             width: 800px;
@@ -159,9 +163,10 @@
             background-color:#CC9933;
         }
         .inputpanel{
+            color: #ffffff;
             width: 800px;
             height: 20px;
-            background-color:#aadddd;
+            background-color:#000000;
         }
     </style>
 </head>
