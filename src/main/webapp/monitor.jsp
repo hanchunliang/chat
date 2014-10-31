@@ -48,6 +48,7 @@
                 data: "type=1&did="+dialogId+"&index=0",
                 async: false ,
                 success: function (msges){
+                    if(!msges) return;
                     var len=msges.length;
                     if(len>0){
                         index = index+len;
@@ -91,6 +92,9 @@
                     $('#msg_1').val("");
                 }
             });
+            $(".time").bind("focus",function(){
+                WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});
+            })
         });
         function getTimeStr(_time){
             var dateTime = new Date(_time);
@@ -135,7 +139,7 @@
 <div>
     <h1>聊天监控页面</h1>
 </div>
-<div>查询条件：时间<input onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" id="start" type="text">-<input onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" type="text" id="end"> 发起人<input type="text" id="from"> 接收人<input type="text" id="to"> <input type="button" value="查询" onclick="search();"></div>
+<div>查询条件：时间<input class="time" id="start" type="text">-<input class="time" type="text" id="end"> 发起人<input type="text" id="from"> 接收人<input type="text" id="to"> <input type="button" value="查询" onclick="search();"></div>
 <div class="top">
 <table id="table" width="100%"></table>
 </div>
