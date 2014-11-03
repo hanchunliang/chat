@@ -80,13 +80,13 @@ public class MonitorController extends HttpServlet{
         if (start!=null&&!start.trim().equals("")){
             try {
                 start = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(start).getTime()+"";
-                condition.and(new Condition(Condition.Operator.GTE,"time",start));
+                condition.and(new Condition(Condition.Operator.GE,"time",start));
             } catch (ParseException e) {}
         }
         if (end!=null&&!end.trim().equals("")){
             try {
                 end = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(end).getTime()+"";
-                condition.and(new Condition(Condition.Operator.LTE,"time",end));
+                condition.and(new Condition(Condition.Operator.LE,"time",end));
             } catch (ParseException e) {}
         }
         List<DialogPanel> dialogPanels = ImEngine.getDialogPanels(Common.groupId, condition);
